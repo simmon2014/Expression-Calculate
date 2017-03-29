@@ -1,0 +1,13 @@
+[参数开始]
+n=2730;齿轮1轴转速,单位r/min
+Mn=6;法向模数,单位mm
+belta=14;螺旋角,单位度
+Han'=1;法面齿顶高系数
+[参数结束]
+[公式开始]
+Rn=pow(Mn,0.51);Rn=2*pow(Mn,2);
+Cn=Rn+pow(2,8);Cn=Rn+pow(2,8);
+Max=max(Rn,Cn);
+Min=min(Rn,Cn);
+BB=2+max(Rn,Cn)*7+sin(min(Rn,Cn));
+[公式结束]
